@@ -27,7 +27,7 @@ func init() {
 	flag.Float64Var(&kelvin, "K", 0.0, "temperature in Kelvin")
 	flag.StringVar(&out, "out", "C", "calculate temperature in C - celsius, F - farhenheit, K- Kelvin")
 	flag.StringVar(&funfacts, "funfacts", "sun", "\"fun-facts\" om sun - Solen, Luna - Månen og terra - Jorden")
-	flag.StringVar(&t, "T", "C", "temperature unit for fun-facts")
+	flag.StringVar(&t, "T", "C", "temperature unit for funfacts")
 }
 
 // Command example: "go run main.go -F 100 -out C"
@@ -36,6 +36,7 @@ func main() {
 
 	flag.Parse()
 
+	// Tar for seg konvertering av gradene
 	if isFlagPassed("F") && isFlagPassed("out") {
 		if out == "C" {
 			celsius = conv.FahrenheitToCelsius(fahr)
@@ -72,7 +73,9 @@ func main() {
 		}
 	}
 
+	// tar for seg hvilke funfacts og hvilke grader de skal komme i
 	if isFlagPassed("funfacts") {
+		// månen er ikke en planet, men var beste ordet jeg kom på
 		planet := ""
 		switch funfacts {
 		case "sun":
@@ -102,6 +105,7 @@ func isFlagPassed(name string) bool {
 	return found
 }
 
+// Formaterer verdine
 func NumFormat(num float64) string {
 
 	// Runder nummeret til 2 desimaler
