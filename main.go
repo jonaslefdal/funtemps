@@ -27,7 +27,7 @@ func init() {
 	flag.Float64Var(&kelvin, "K", 0.0, "temperature in Kelvin")
 	flag.StringVar(&out, "out", "C", "calculate temperature in C - celsius, F - farhenheit, K- Kelvin")
 	flag.StringVar(&funfacts, "funfacts", "sun", "\"fun-facts\" om sun - Solen, Luna - Månen og terra - Jorden")
-	flag.StringVar(&t, "t", "C", "temperature unit for fun-facts")
+	flag.StringVar(&t, "T", "C", "temperature unit for fun-facts")
 }
 
 // Command example: "go run main.go -F 100 -out C"
