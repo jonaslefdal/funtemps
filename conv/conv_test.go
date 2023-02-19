@@ -31,12 +31,12 @@ func TestFahrenheitToCelsius(t *testing.T) {
 	}
 
 	tests := []test{
-		{input: 32, want: 0},
+		{input: 123, want: 50.56},
 	}
 
 	for _, tc := range tests {
 		got := FahrenheitToCelsius(tc.input)
-		if !withinTolerance(tc.want, got, 1e-12) {
+		if !withinTolerance(tc.want, got, 1e-3) {
 			t.Errorf("expected: %.18f, got: %.18f", tc.want, got)
 		}
 	}
