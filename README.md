@@ -8,7 +8,9 @@
 | `-out string` | Calculate temperature in C - celsius, F - farhenheit, K- Kelvin (default "C") |
 | `-funfacts string`  | "Funfacts" om sun - Solen, Luna - Månen og terra - Jorden (default "sun" |
 | `-T string` | Temperature unit for funfacts (default "C") |
+
 <br>
+
 # How to use 
 
 ## Example convertion command: 
